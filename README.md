@@ -1,4 +1,6 @@
-topicos4-chat
-=============
+AngularJS + Socket.IO + NodeJS Chat
+==========================
 
-Chat Room + Todo List: Node.js, Express.js, Socket.io, Angular.js, MongoDB
+A chat server/cliente using AngularJS, Socket.IO and NodeJS
+
+[demo](http://angularjs-socketio-nodejs-chat.herokuapp.com/)

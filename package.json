@@ -1,0 +1,15 @@
+{
+    "name": "topicos4-chat"
+  , "version": "0.0.1"
+  , "private": true
+  , "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+  , "dependencies": {
+      "express": "latest"
+    , "jade": ">= 0.26.1"
+    , "socket.io": ">= 0.9.6"
+    ,"mongoose" : "3.3.1"
+  }
+}
