@@ -6,7 +6,7 @@ Serviço de mensageiro instantâneo utilizando as tecnologias: Nodejs + Expressj
 Foi incorporado a aplicação um ambiente de troca de mensagens público, um controle de usuário, e uma lista de tarefas. Nesta lista é possivel criar tarefas, marcar como concluídas e arquivá-las.
 A coleção de registo é armazenada em uma base de dados documental, utilizando como banco de dados o MongoDB.
 
-Esta aplicação foi esboçada para ilustrar o funcionamento de uma aplicação baseada em tais ecossistemas.
+Esta aplicação foi esboçada para ilustrar o funcionamento de uma aplicação baseada em tais tecnologias.
 
 
 Instalação e Uso:
