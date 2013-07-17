@@ -1,4 +1,4 @@
-Nodejs + Expressjs + Socket.io + Angularjs + MongoDB
+Node.js + Express.js + Socket.io + Angular.js + MongoDB
 ==========================
 
 Serviço de mensageiro instantâneo utilizando as tecnologias: Nodejs + Expressjs + Socket.io + Angularjs + MongoDB.
