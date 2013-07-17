@@ -46,3 +46,5 @@ Referências:
 [SocketIo]: http://socket.io/ "SOcket.io"
 [AngularJS]: http://angularjs.org/ "AngularJS"
 [MongoDB]:http://www.mongodb.org/ "MongoDB"
+
+_Baseado em: https://github.com/btford/angular-socket-io-im_
