@@ -1,28 +1,22 @@
-var express = require('express')
-  , app = express()
-  , mongoose = require('mongoose')
-  , http = require('http')
-  , server = http.createServer(app)
-  , routes = require('./routes')
-  , socket = require('./routes/socket.js')
-  , api = require('./routes/api.js')
-  , io = require('socket.io').listen(server);
-// Configuration
-var config = require('./config')(app, express, mongoose);
+var express = require('express') //recupera modulo express (arquivo javascript express.js). require é uma função nodejs
+  , app = express() // inicia a aplicação express
+  , http = require('http') // recupera o modulo http
+  , server = http.createServer(app) // cria um servidor, passando como parâmetros configurações de como 'ouvir'
+  , routes = require('./servidor/routes') // modulo index da pagina Routes
+  , socket = require('./servidor/socket') // modulo socket e suas funcionalidades
+  , io = require('socket.io').listen(server); // socketio, começa ouvir o que vem do servidor
+
+// Configuração
+var config = require('./servidor/config')(app, express); // recupera uma referẽncia para o modulo de configuração criado, passando a aplicação (app) e o express como parâmetro
+
 // Routes
-app.get('/', routes.index);
-app.get   ('/api/list'    , api.list);
-app.post  ('/api/add' , api.add);
-app.post  ('/api/archive' , api.archive);
-app.put   ('/api/update/:id', api.update);
+app.get('/', routes.index); // raiz da url manda renderizar página index.jade
 
-// redirect all others to the index (HTML5 history)
-app.get('*', routes.index);
+app.get('*', routes.index); // redireciona todas as rotinas para o index
 
-// Socket.io Communication
-io.sockets.on('connection', socket);
+io.sockets.on('connection', socket); // inicia uma comunicação com o socket.io
 
-// Start server
-var port = 3001;
+var port = 3001; // porta aonde será ouvida
 
-server.listen(port);
+server.listen(port); // servidor começa ouvir o que vem da porta 3001
+console.log('Linsten on port ' + port);
